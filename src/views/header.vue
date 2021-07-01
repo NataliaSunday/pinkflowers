@@ -13,6 +13,7 @@
     <article class="article">
         <h1 class="article__heading--1">Lorem ipsum</h1>
         <h2 class="article__heading--2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</h2>
+        <v-btn class="btn">lorem</v-btn>
     </article>
   </header>
 </template>
