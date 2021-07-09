@@ -1,12 +1,12 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 $color-dark-pink: #691D2E;
 $color-light-pink: #ECBCC4;
 $color-light-green: #98D198;
 $color-dark-green: #669204;
 $color-white: #FFFFFF;
-$font-heading: url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
-$font-paragraph: url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-
+$font-heading: 'Raleway';
+$font-paragraph: 'Lato';
 .heading{
     font-family: $font-heading, 'Arial';
     font-size: 4rem;
@@ -42,4 +42,6 @@ $font-paragraph: url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400
     font-family: 'Lato';
     font-weight: 300;
     font-size: 1.25rem;
+    color: $color-dark-pink;
+    cursor: pointer;
 }
