@@ -10,10 +10,10 @@
   </v-app>
 </template>
 <script>
-import Header from '../src/views/Header.vue'
-import About from '../src/views/About.vue'
-import Services from '../src/views/Services.vue'
-import Galery from '../src/views/Galery.vue'
+import Header from '../src/views/header.vue'
+import About from '../src/views/about.vue'
+import Services from '../src/views/services.vue'
+import Galery from '../src/views/galery.vue'
 import Contact from '../src/views/Contact.vue'
 export default {
   name: 'App',
@@ -30,3 +30,8 @@ export default {
   })
 }
 </script>
+
+<style lang="scss">
+@import 'style/_variables.scss';
+@import 'style/_vuetifyChanges.scss'
+</style>
