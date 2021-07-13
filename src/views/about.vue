@@ -1,7 +1,7 @@
 <template>
-    <section class="about pb-16">
-      <Heading :sectionTitle=title></Heading>
-      <div class="about__content d-flex align-center justify-center">
+    <section class="about bg-light-pink pb-16">
+      <Heading :sectionTitle=title :headingColor="headingColor"></Heading>
+      <div class="about__content  d-flex align-center justify-center">
           <div class="about__content__text">
               <p class="paragraph paragraph--white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore 
@@ -27,7 +27,8 @@ import Heading from '../components/sectionHeadings.vue'
 export default {
     data(){
         return{
-            title: "About us"
+            title: "About us",
+            headingColor: "heading--pink"
         }
     },
     components:{
@@ -37,7 +38,6 @@ export default {
 </script>
 <style lang="scss">
 .about{
-    background-color: #ECBCC4;
     width: 100vw;
     height: auto;
     &__content{

@@ -1,12 +1,22 @@
 <template>
-    <div>
-        <p>services</p>
-    </div>
+   <section class="services bg-white">
+        <Heading :sectionTitle=title :headingColor=headingColor></Heading>
+   </section>
 </template>
-<style scoped>
-p{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(170, 236, 238);
+<script>
+import Heading from '../components/sectionHeadings.vue' 
+export default {
+    data(){
+        return{
+            title: "Services",
+            headingColor: "heading--pink"
+        }
+    },
+    components:{
+        Heading
+    }
 }
+</script>
+<style scoped>
+
 </style>

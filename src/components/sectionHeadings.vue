@@ -1,7 +1,7 @@
 <template>
      <section class="sectionHeading d-flex justify-center align-center pa-16"> 
             <div class="sectionHeading__decor ml-4 mr-4"></div>
-            <h1 class="heading heading--white heading--section">{{ sectionTitle }}</h1>
+            <h1 class="heading heading--white heading--section" :class="headingColor">{{ sectionTitle }}</h1>
             <div class="sectionHeading__decor ml-4 mr-4"></div>
        </section>
 </template>
@@ -9,7 +9,8 @@
 <script>
 export default {
     props:{
-        sectionTitle: String
+        sectionTitle: String,
+        headingColor:String
     }
 }
 </script>
