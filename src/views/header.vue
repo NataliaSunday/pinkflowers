@@ -43,7 +43,7 @@ export default {
        z-index: 100;
         width: 100%;
         background-color:none;
-        transition:all 1s ease;
+        transition:all .3s ease;
         &--scrolled{
             background-color: white;
             border-radius: 4px;

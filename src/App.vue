@@ -33,5 +33,7 @@ export default {
 
 <style lang="scss">
 @import 'style/_variables.scss';
-@import 'style/_vuetifyChanges.scss'
+@import 'style/_typography.scss';
+@import 'style/_vuetifyChanges.scss';
+
 </style>
