@@ -28,7 +28,7 @@ export default {
     data(){
         return{
             title: "About us",
-            headingColor: "heading--pink"
+            headingColor: "heading--white"
         }
     },
     components:{
