@@ -20,6 +20,7 @@
 
 .paragraph{
     font-family: $font-paragraph, 'Arial';
+    text-align: center;
     &--header{
         font-size:2rem;
     }
@@ -28,6 +29,9 @@
     }
     &--dark-pink{
         color: $color-dark-pink;
+    }
+    &--white{
+        color: $color-white;
     }
 }
 .link{

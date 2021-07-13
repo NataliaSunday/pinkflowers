@@ -1,6 +1,25 @@
 <template>
-    <section class="about">
+    <section class="about pb-16">
       <Heading :sectionTitle=title></Heading>
+      <div class="about__content d-flex align-center justify-center">
+          <div class="about__content__text">
+              <p class="paragraph paragraph--white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat. Duis aute irure dolor in 
+                    reprehenderit in voluptate velit esse cillum dolore eu 
+                    fugiat nulla pariatur.</p>
+                <p class="paragraph paragraph--white">Sed ut perspiciatis unde omnis iste natus error sit 
+                    voluptatem accusantium doloremque laudantium, totam 
+                    rem aperiam, eaque ipsa quae ab illo inventore veritatis 
+                    et quasi architecto beatae vitae dicta sunt explicabo. 
+                    Nemo enim </p>
+          </div>
+          <div class="about__content__img pl-8">
+              <img src="../assets/ABOUT.png" alt="Jasmine and Marry - our team photo">
+          </div>
+      </div>
     </section>
 </template>
 <script>
@@ -20,7 +39,17 @@ export default {
 .about{
     background-color: #ECBCC4;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    &__content{
+        &__text{
+            max-width:25%;
+           
+        }
+        &__img{
+            
+        }
+        
+    }
     
 }
 
