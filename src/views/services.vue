@@ -1,30 +1,45 @@
 <template>
    <section class="services bg-white">
         <Heading :sectionTitle=title :headingColor=headingColor></Heading>
+        <ul class="services__panels d-flex ">
+            <li class="services__panels__panel" v-for="el in services" :key="el.id">
+                <service-panel :name="el.name" :imgPath="el.imgPath" :description="el.description"></service-panel>
+                
+            </li>
+        </ul>
    </section>
 </template>
 <script>
-import Heading from '../components/sectionHeadings.vue' 
+import json from '../data/servicesData.json'
+import Heading from '../components/sectionHeadings.vue'
 import servicePanel from '../components/servicePanel.vue'
 export default {
-    data(){
-        return{
-            title: "Services",
-            headingColor: "heading--pink",
-            services: {
-                name: 'bouquest',
-                imgPath: '../assets/bouquest.jpg',
-                description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia '
-
-            }
-        }
-    },
-    components:{
-        Heading,
-        servicePanel
+  data () {
+    return {
+      title: 'Services',
+      headingColor: 'heading--pink',
+      services: json.services
     }
+  },
+  components: {
+    Heading,
+    servicePanel
+  }
 }
 </script>
-<style scoped>
+<style lang="scss">
+.services{
+    width: 100vw;
+    height: 100vh;
+    &__panels{
+      width: inherit;
+      height: inherit;
+      list-style: none;
+      &__panel{
+        width: 33%;
+        height: inherit;
+      }
+    }
+}
 
 </style>
