@@ -4,7 +4,7 @@
         <ul class="services__panels d-flex ">
             <li class="services__panels__panel" v-for="el in services" :key="el.id">
                 <service-panel :name="el.name" :imgPath="el.imgPath" :description="el.description"></service-panel>
-                
+
             </li>
         </ul>
    </section>
@@ -21,6 +21,7 @@ export default {
       services: json.services
     }
   },
+ 
   components: {
     Heading,
     servicePanel

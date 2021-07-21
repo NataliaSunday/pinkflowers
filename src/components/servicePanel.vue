@@ -1,7 +1,8 @@
 <template>
-    <article class="servicePanel" >
-        <h3 class="heading heading--section heading--white">{{name}}</h3>
-        <v-btn>more</v-btn>
+    <article class="servicePanel" :style="{ 'background-image': 'url(' + `${imgPath}` + ')' }"
+ >
+        <h3 class="heading heading--section heading--pink">{{name}}</h3>
+        <v-btn @click="alert(imgPath)">more</v-btn>
     </article>
 </template>
 <script>
@@ -10,9 +11,15 @@ export default {
   props: {
     name: String,
     imgPath: String,
-    description: String
+    description: String,
 
+  },
+  mounted() {
+    console.log(this.imgPath)
+    console.log(this.name)
+   
   }
+
 }
 </script>
 <style lang="scss">
@@ -23,7 +30,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: ("../assets/services/bouquets.jpg");
+
 }
 
 </style>
