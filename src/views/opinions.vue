@@ -4,8 +4,8 @@
         <v-container>
             <v-row>
                 <v-column >
-                    <Opinion></Opinion>
-                    <Opinion></Opinion>
+                    <Opinion :title="opinionsData[0].name" :subtitle="opinionsData[0].data" :text="opinionsData[0].text"></Opinion>
+                     <Opinion :title="opinionsData[1].name" :subtitle="opinionsData[1].data" :text="opinionsData[1].text"></Opinion>
                 </v-column>
             </v-row>
             <v-row>
@@ -18,6 +18,7 @@
     </section>
 </template>
 <script>
+import json from '../data/opinions.json'
 import Heading from '../components/sectionHeadings.vue'
 import Opinion from '../components/opinionsOpinion.vue'
 export default {
@@ -25,6 +26,7 @@ export default {
     return {
       title: 'Opinions',
       headingColor: 'heading--white',
+      opinionsData: json.opinions
     }
   },
    components: {
