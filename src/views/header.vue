@@ -9,7 +9,7 @@
             <li class="nav__list__item link" @click="$vuetify.goTo('#Contact', ease)">CONTACT</li>
         </ul>
         <article class="banner d-flex flex-column align-center justify-center">
-            
+
         <h1 class="heading heading--header">Lorem ipsum </h1>
         <p class="paragraph paragraph--header paragraph--dark-pink">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
         <v-btn class="btn align-self-center">lorem</v-btn>
@@ -19,20 +19,20 @@
 
 <script>
 export default {
-    data(){
-        return{
-           scrollPosition: null
-        }
-    },
-    methods:{
-        upddateScroll(){
-            this.scrollPosition = window.scrollY;
-        }
-    },
-    mounted: function(){
-        window.addEventListener('scroll', this.upddateScroll)
-    },
+  data () {
+    return {
+      scrollPosition: null
     }
+  },
+  methods: {
+    upddateScroll () {
+      this.scrollPosition = window.scrollY
+    }
+  },
+  mounted: function () {
+    window.addEventListener('scroll', this.upddateScroll)
+  }
+}
 </script>
 
 <style lang="scss">
@@ -48,7 +48,7 @@ export default {
             background-color: white;
             border-radius: 4px;
             box-shadow: rgb(211, 208, 208) 3px 2px 10px;
-            
+
         }
     &__item{
         padding: 1rem;

@@ -4,17 +4,17 @@
    </section>
 </template>
 <script>
-import Heading from '../components/sectionHeadings.vue' 
+import Heading from '../components/sectionHeadings.vue'
 export default {
-    data(){
-        return{
-            title: "Services",
-            headingColor: "heading--pink"
-        }
-    },
-    components:{
-        Heading
+  data () {
+    return {
+      title: 'Services',
+      headingColor: 'heading--pink'
     }
+  },
+  components: {
+    Heading
+  }
 }
 </script>
 <style scoped>

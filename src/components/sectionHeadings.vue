@@ -1,5 +1,5 @@
 <template>
-     <section class="sectionHeading d-flex justify-center align-center pa-16"> 
+     <section class="sectionHeading d-flex justify-center align-center pa-16">
             <div class="sectionHeading__decor ml-4 mr-4"></div>
             <h1 class="heading heading--white heading--section" :class="headingColor">{{ sectionTitle }}</h1>
             <div class="sectionHeading__decor ml-4 mr-4"></div>
@@ -8,10 +8,10 @@
 
 <script>
 export default {
-    props:{
-        sectionTitle: String,
-        headingColor:String
-    }
+  props: {
+    sectionTitle: String,
+    headingColor: String
+  }
 }
 </script>
 <style lang="scss" scoped>
