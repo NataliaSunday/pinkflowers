@@ -5,6 +5,7 @@
       <About id="About"></About>
       <Services id="Services"></Services>
       <Gallery id="Gallery"></Gallery>
+      <Opinions></Opinions>
       <Contact id="Contact"></Contact>
     </v-main>
   </v-app>
@@ -14,6 +15,7 @@ import Header from '../src/views/header.vue'
 import About from '../src/views/about.vue'
 import Services from '../src/views/services.vue'
 import Gallery from './views/Gallery.vue'
+import Opinions from '../src/views/Opinions.vue'
 import Contact from '../src/views/Contact.vue'
 export default {
   name: 'App',
@@ -23,6 +25,7 @@ export default {
     About,
     Services,
     Gallery,
+    Opinions,
     Contact
   },
   data: () => ({
