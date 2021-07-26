@@ -1,7 +1,20 @@
 <template>
     <section class="opinions bg-lightGreen">
         <Heading :sectionTitle=title :headingColor=headingColor></Heading>
-        <Opinion></Opinion>
+        <v-container>
+            <v-row>
+                <v-column >
+                    <Opinion></Opinion>
+                    <Opinion></Opinion>
+                </v-column>
+            </v-row>
+            <v-row>
+                <v-column>
+                    <Opinion></Opinion>
+                    <Opinion></Opinion>
+                </v-column>
+            </v-row>
+        </v-container>
     </section>
 </template>
 <script>
