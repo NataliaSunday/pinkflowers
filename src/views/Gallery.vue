@@ -1,5 +1,5 @@
 <template>
-   <section class="galery bg-white">
+   <section class="gallery bg-white">
         <Heading :sectionTitle=title :headingColor=headingColor></Heading>
    </section>
 </template>
@@ -8,7 +8,7 @@ import Heading from '../components/sectionHeadings.vue'
 export default {
   data () {
     return {
-      title: 'Galery',
+      title: 'Gallery',
       headingColor: 'heading--white'
     }
   },
@@ -19,7 +19,7 @@ export default {
 </script>
 <style lang="scss">
 @import '../style/_variables.scss';
-.galery{
+.gallery{
     width: 100vw;
     height: 100vh;
     position: relative;

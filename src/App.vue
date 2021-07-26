@@ -4,7 +4,7 @@
       <Header id="Header"></Header>
       <About id="About"></About>
       <Services id="Services"></Services>
-      <Galery id="Galery"></Galery>
+      <Gallery id="Gallery"></Gallery>
       <Contact id="Contact"></Contact>
     </v-main>
   </v-app>
@@ -13,7 +13,7 @@
 import Header from '../src/views/header.vue'
 import About from '../src/views/about.vue'
 import Services from '../src/views/services.vue'
-import Galery from '../src/views/Galery.vue'
+import Gallery from './views/Gallery.vue'
 import Contact from '../src/views/Contact.vue'
 export default {
   name: 'App',
@@ -22,7 +22,7 @@ export default {
     Header,
     About,
     Services,
-    Galery,
+    Gallery,
     Contact
   },
   data: () => ({
