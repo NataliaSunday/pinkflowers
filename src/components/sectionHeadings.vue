@@ -18,6 +18,8 @@ export default {
 .sectionHeading{
         width: inherit;
         height: min-height;
+        position: relative;
+        z-index: 2;
         &__decor{
             background-color: #ffff;
             width: 20%;

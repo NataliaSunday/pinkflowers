@@ -13,7 +13,7 @@
 import Header from '../src/views/header.vue'
 import About from '../src/views/about.vue'
 import Services from '../src/views/services.vue'
-import Galery from '../src/views/galery.vue'
+import Galery from '../src/views/Galery.vue'
 import Contact from '../src/views/Contact.vue'
 export default {
   name: 'App',
