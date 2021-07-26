@@ -1,19 +1,47 @@
 <template>
    <section class="gallery bg-white">
         <Heading :sectionTitle=title :headingColor=headingColor></Heading>
+          <v-container class="gallery__photoBox">
+            <v-row>
+              <v-col
+              v-for="n in 6"
+              :key="n"
+              cols="12"
+              sm="2"
+           >
+           <galleryPhoto :photoUrl="defaultUrl+ n + '.jpg'"></galleryPhoto>
+          </v-col>
+            </v-row>
+             <v-row>
+              <v-col
+              v-for="n in 6"
+              :key="n"
+              cols="12"
+              sm="2"
+           >
+           <galleryPhoto :photoUrl="defaultUrl+ n + '.jpg'"></galleryPhoto>
+          </v-col>
+            </v-row>
+            <v-btn class="btn">more</v-btn>
+          </v-container>
+         
+
    </section>
 </template>
 <script>
 import Heading from '../components/sectionHeadings.vue'
+import galleryPhoto from '../components/galleryPhoto.vue'
 export default {
   data () {
     return {
       title: 'Gallery',
-      headingColor: 'heading--white'
+      headingColor: 'heading--white',
+      defaultUrl: '../assets/'
     }
   },
   components: {
-    Heading
+    Heading,
+    galleryPhoto
   }
 }
 </script>
@@ -35,6 +63,13 @@ export default {
         z-index: 1;
         background-color: $color-light-green;
     }
+    &__photoBox{
+      width: 90%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+    }
 }
+
 
 </style>
