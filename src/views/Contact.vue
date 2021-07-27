@@ -11,18 +11,18 @@ export default {
   data () {
     return {
       title: 'Contact',
-      headingColor: 'heading--white',
+      headingColor: 'heading--white'
     }
   },
   components: {
     Heading,
-    ContactForm,
+    ContactForm
   }
 }
 </script>
 <style lang="scss" scoped>
 .contact{
     width: 100vw;
-    height: 100vh;
+    height: min-content;
 }
 </style>
