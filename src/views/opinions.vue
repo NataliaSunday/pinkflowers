@@ -1,19 +1,10 @@
 <template>
-    <section class="opinions bg-lightGreen">
+    <section class="opinions bg-lightGreen  pb-16">
         <Heading :sectionTitle=title :headingColor=headingColor></Heading>
-        <v-container>
-            <v-row>
-                <v-column >
-                    <Opinion :title="opinionsData[0].name" :subtitle="opinionsData[0].data" :text="opinionsData[0].text"></Opinion>
-                     <Opinion :title="opinionsData[1].name" :subtitle="opinionsData[1].data" :text="opinionsData[1].text"></Opinion>
-                </v-column>
-            </v-row>
-            <v-row>
-                <v-column>
-                    <Opinion></Opinion>
-                    <Opinion></Opinion>
-                </v-column>
-            </v-row>
+        <v-container  class="d-flex flex-row flex-wrap" >
+                 <div class="opinions__container " v-for="el in opinionsData" :key="el.index">
+                     <Opinion :title="el.name" :subtitle="el.data" :text="el.text"></Opinion>
+                </div>
         </v-container>
     </section>
 </template>
@@ -32,13 +23,18 @@ export default {
    components: {
     Heading,
     Opinion
-  }
+  },
 }
 </script>
 <style lang="scss">
 .opinions{
     width: 100vw;
-    height: 100vh;
+    height: min-content;
+    &__container{
+        width: 50%;
+       
+    }
 }
+
 
 </style>
