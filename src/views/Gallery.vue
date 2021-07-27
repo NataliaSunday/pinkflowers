@@ -24,7 +24,6 @@
             </v-row>
             <v-btn class="btn">more</v-btn>
           </v-container>
-         
 
    </section>
 </template>
@@ -70,6 +69,5 @@ export default {
       z-index: 2;
     }
 }
-
 
 </style>

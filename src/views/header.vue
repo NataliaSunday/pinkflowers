@@ -5,7 +5,7 @@
             <li class="nav__list__item link" @click="$vuetify.goTo('#Header', ease)">SHOP</li>
             <li class="nav__list__item link" @click="$vuetify.goTo('#About', ease)">ABOUT</li>
             <li class="nav__list__item link" @click="$vuetify.goTo('#Services', ease)">SERVICES</li>
-            <li class="nav__list__item link" @click="$vuetify.goTo('#Galery', ease)">GALERY</li>
+            <li class="nav__list__item link" @click="$vuetify.goTo('#Gallery', ease)">GALERY</li>
             <li class="nav__list__item link" @click="$vuetify.goTo('#Contact', ease)">CONTACT</li>
         </ul>
         <article class="banner d-flex flex-column align-center justify-center">

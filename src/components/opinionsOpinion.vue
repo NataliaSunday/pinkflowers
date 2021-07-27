@@ -7,12 +7,12 @@
 </template>
 <script>
 export default {
-    props:{
-        title: String,
-        subtitle:String,
-        text:String
-    }
-    
+  props: {
+    title: String,
+    subtitle: String,
+    text: String
+  }
+
 }
 </script>
 <style lang="scss">

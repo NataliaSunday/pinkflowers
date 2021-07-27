@@ -20,10 +20,10 @@ export default {
       opinionsData: json.opinions
     }
   },
-   components: {
+  components: {
     Heading,
     Opinion
-  },
+  }
 }
 </script>
 <style lang="scss">
@@ -32,9 +32,8 @@ export default {
     height: min-content;
     &__container{
         width: 50%;
-       
+
     }
 }
-
 
 </style>
