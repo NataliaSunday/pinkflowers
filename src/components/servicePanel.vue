@@ -1,8 +1,8 @@
 <template>
-    <article class="servicePanel" :style="{ 'background-image': 'url(' + `${imgPath}` + ')' }"
- >
+    <article class="servicePanel" :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }"
+ >     
         <h3 class="heading heading--section heading--pink">{{name}}</h3>
-        <v-btn @click="alert(imgPath)">more</v-btn>
+        <v-btn>more</v-btn>
     </article>
 </template>
 <script>
