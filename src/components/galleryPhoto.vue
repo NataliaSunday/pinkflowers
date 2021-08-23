@@ -1,7 +1,6 @@
 <template>
     <article class="photoBox">
         <img :src="photoUrl" alt="" class="photoBox__photo">
-         
     </article>
 </template>
 <script>

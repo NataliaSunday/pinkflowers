@@ -9,7 +9,7 @@
               cols="12"
               sm="2"
            >
-           <galleryPhoto :photoUrl="defaultUrl+ n + '.jpg'"></galleryPhoto>
+           <galleryPhoto photoUrl=img></galleryPhoto>
           </v-col>
             </v-row>
              <v-row>
@@ -19,7 +19,7 @@
               cols="12"
               sm="2"
            >
-           <galleryPhoto :photoUrl="defaultUrl+ n + '.jpg'"></galleryPhoto>
+           <galleryPhoto :photoUrl="'~/assets/images/1.jpg'"></galleryPhoto>
           </v-col>
             </v-row>
             <v-btn class="btn">more</v-btn>
@@ -30,12 +30,12 @@
 <script>
 import Heading from '../components/sectionHeadings.vue'
 import galleryPhoto from '../components/galleryPhoto.vue'
+
 export default {
   data () {
     return {
       title: 'Gallery',
       headingColor: 'heading--white',
-      defaultUrl: '../assets/'
     }
   },
   components: {
