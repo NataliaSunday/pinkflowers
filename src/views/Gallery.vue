@@ -9,7 +9,7 @@
               cols="12"
               sm="2"
            >
-           <galleryPhoto photoUrl=img></galleryPhoto>
+           <galleryPhoto :photoNumber="n"></galleryPhoto>
           </v-col>
             </v-row>
              <v-row>
@@ -19,7 +19,7 @@
               cols="12"
               sm="2"
            >
-           <galleryPhoto :photoUrl="'~/assets/images/1.jpg'"></galleryPhoto>
+          <galleryPhoto :photoNumber="n"></galleryPhoto>
           </v-col>
             </v-row>
             <v-btn class="btn">more</v-btn>

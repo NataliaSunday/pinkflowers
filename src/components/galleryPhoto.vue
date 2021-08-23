@@ -1,12 +1,20 @@
 <template>
     <article class="photoBox">
-        <img :src="photoUrl" alt="" class="photoBox__photo">
+        <img :src='imgUrl' alt="" class="photoBox__photo">
     </article>
 </template>
 <script>
 export default {
   props: {
-    photoUrl: String
+    photoNumber: Number
+  },
+  computed: {
+    imgUrl(){
+      return require('../assets/gallery/' + this.photoNumber + '.jpg')
+    }
+  },
+   mounted() {
+    console.log(imgUrl)
   }
 }
 </script>
