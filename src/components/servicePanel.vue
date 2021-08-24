@@ -1,8 +1,10 @@
 <template>
-    <article class="servicePanel" :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }"
- >     
-        <h3 class="heading heading--section heading--pink">{{name}}</h3>
-        <v-btn>more</v-btn>
+    <article class="servicePanel d-flex flex-column justify-end align-center " :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }">     
+          <div class=" servicePanel__overlay d-flex flex-column justify-end align-center pb-8">
+            <h3 class="heading heading--section heading--pink">{{name}}</h3>
+            <v-btn>more</v-btn>
+          </div>
+ 
     </article>
 </template>
 <script>
@@ -12,25 +14,41 @@ export default {
     name: String,
     imgPath: String,
     description: String,
+    isHover: {
+      default: false,
+      type: Boolean
+    }
 
-  },
-  mounted() {
-    console.log(this.imgPath)
-    console.log(this.name)
-   
   }
 
 }
 </script>
 <style lang="scss">
 .servicePanel{
-  height: 500px;
-  width: 500px;
-  border: 1px solid black;
+  height:100%;
+  width: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
+   position: relative;
 }
+.servicePanel__overlay{
+  background-color: rgba(0,0,0, 0.25);
+  width: 100%;
+  height: 100%;
+}
+/*
+.servicePanel::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.25);
+    z-index: 2;
+
+  }
+  /*/
 
 </style>

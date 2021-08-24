@@ -1,3 +1,6 @@
 .v-application a{
     color: $color-dark-pink !important;
 }
+.v-application ul, .v-application ol {
+    padding-left: 0;
+}

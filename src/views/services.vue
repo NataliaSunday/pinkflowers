@@ -1,7 +1,7 @@
 <template>
-   <section class="services bg-white">
+   <section class="services bg-white pb-16">
         <Heading :sectionTitle=title :headingColor=headingColor :decorColor="decorColor"></Heading>
-        <ul class="services__panels d-flex ">
+        <ul class="services__panels d-flex justify-center ">
             <li class="services__panels__panel" v-for="el in services" :key="el.id">
                 <service-panel :name="el.name" :imgPath="el.imgPath" :description="el.description"></service-panel>
 
@@ -32,14 +32,15 @@ export default {
 <style lang="scss">
 .services{
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     &__panels{
       width: inherit;
-      height: inherit;
+      height:70vh;
       list-style: none;
       &__panel{
-        width: 33%;
-        height: inherit;
+        width: 100%;
+        max-width: 33.3%;
+        height: 100%;
       }
     }
 }
