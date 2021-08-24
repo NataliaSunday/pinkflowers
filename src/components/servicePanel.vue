@@ -1,6 +1,9 @@
 <template>
-    <article class="servicePanel d-flex flex-column justify-end align-center " :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }">     
-          <div class=" servicePanel__overlay d-flex flex-column justify-end align-center pb-8">
+    <article v-on:click="alerto()" class="servicePanel d-flex flex-column  align-center " 
+    :class="[isHover ? 'justify-center' : 'justify-end']"
+    :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }"
+    >     
+          <div class=" servicePanel__overlay d-flex flex-column pb-8 align-center" >
             <h3 class="heading heading--section heading--pink">{{name}}</h3>
             <v-btn>more</v-btn>
           </div>
@@ -10,16 +13,24 @@
 <script>
 
 export default {
+  data(){
+    return {
+       isHover: false
+
+    }
+  },
   props: {
     name: String,
     imgPath: String,
     description: String,
-    isHover: {
-      default: false,
-      type: Boolean
-    }
+   },
+   methods: {
+     alerto(){
+       this.isHover = !this.isHover
+      
+     }
+   }
 
-  }
 
 }
 </script>
@@ -30,14 +41,15 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-   position: relative;
+  
 }
+
+/*
 .servicePanel__overlay{
   background-color: rgba(0,0,0, 0.25);
   width: 100%;
   height: 100%;
 }
-/*
 .servicePanel::after{
     content: '';
     width: 100%;
