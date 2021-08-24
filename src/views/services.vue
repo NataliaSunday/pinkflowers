@@ -1,6 +1,6 @@
 <template>
    <section class="services bg-white">
-        <Heading :sectionTitle=title :headingColor=headingColor></Heading>
+        <Heading :sectionTitle=title :headingColor=headingColor :decorColor="decorColor"></Heading>
         <ul class="services__panels d-flex ">
             <li class="services__panels__panel" v-for="el in services" :key="el.id">
                 <service-panel :name="el.name" :imgPath="el.imgPath" :description="el.description"></service-panel>
@@ -18,6 +18,7 @@ export default {
     return {
       title: 'Services',
       headingColor: 'heading--pink',
+      decorColor: "sectionHeading__decor--pink",
       services: json.services
     }
   },

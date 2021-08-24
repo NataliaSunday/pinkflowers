@@ -1,8 +1,8 @@
 <template>
      <section class="sectionHeading d-flex justify-center align-center pa-16">
-            <div class="sectionHeading__decor ml-4 mr-4"></div>
+            <div class="sectionHeading__decor ml-4 mr-4" :class="decorColor"></div>
             <h1 class="heading heading--white heading--section" :class="headingColor">{{ sectionTitle }}</h1>
-            <div class="sectionHeading__decor ml-4 mr-4"></div>
+            <div class="sectionHeading__decor ml-4 mr-4" :class="decorColor"></div>
        </section>
 </template>
 
@@ -10,7 +10,11 @@
 export default {
   props: {
     sectionTitle: String,
-    headingColor: String
+    headingColor: String,
+    decorColor:{
+      default: 'sectionHeading__decor--white',
+      type: String
+    }
   }
 }
 </script>
@@ -21,9 +25,14 @@ export default {
         position: relative;
         z-index: 2;
         &__decor{
-            background-color: #ffff;
             width: 20%;
             height: .15rem;
+            &--white{
+              background-color: white;
+            }
+            &--pink{
+              background-color: pink;
+            }
         }
-    }
+}
 </style>

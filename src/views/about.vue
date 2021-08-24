@@ -28,7 +28,7 @@ export default {
   data () {
     return {
       title: 'About us',
-      headingColor: 'heading--white'
+      headingColor: 'heading--white',
     }
   },
   components: {
