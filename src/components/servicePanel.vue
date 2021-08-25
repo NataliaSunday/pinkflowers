@@ -1,14 +1,11 @@
 <template>
      <article 
-      @mouseover="isHover=true"
-      @mouseleave="isHover=false" 
-      class="servicePanel d-flex flex-column " 
+      class="servicePanel " 
       :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }"
  >
-       <div class=" servicePanel__overlay d-flex flex-column pb-8 align-center" 
-       :class="[isHover ? 'justify-center' : 'justify-end']">
+       <div class="servicePanel__overlay pb-8 " >
           <h3 class="heading heading--section heading--pink">{{name}}</h3>
-          <p v-if="isHover" class="paragraph paragraph--white">{{description}}</p>
+          <p class="paragraph paragraph--white servicePanel__overlay__paragraph">{{description}}</p>
           <v-btn>more</v-btn>
       </div> 
     </article>
@@ -37,12 +34,37 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
   &__overlay{
-    width: auto;
-    height: 100%;
-    transition: all 3s ease-in;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 0);
+
+    transition: all 1.5s linear;
+   
+   &__paragraph{
+     display: none;
+   }
+   
+    
   }
 }
+.servicePanel:hover .servicePanel__overlay{
+  background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+
+
+}
+.servicePanel:hover .servicePanel__overlay__paragraph{
+  display: flex;
+}
+
 
 //transition
 
