@@ -1,13 +1,16 @@
 <template>
-    <article v-on:click="alerto()" class="servicePanel d-flex flex-column  align-center " 
-    :class="[isHover ? 'justify-center' : 'justify-end']"
-    :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }"
-    >     
-          <div class=" servicePanel__overlay d-flex flex-column pb-8 align-center" >
-            <h3 class="heading heading--section heading--pink">{{name}}</h3>
-            <v-btn>more</v-btn>
-          </div>
- 
+     <article 
+      @mouseover="isHover=true"
+      @mouseleave="isHover=false" 
+      class="servicePanel d-flex flex-column " 
+      :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }"
+ >
+       <div class=" servicePanel__overlay d-flex flex-column pb-8 align-center" 
+       :class="[isHover ? 'justify-center' : 'justify-end']">
+          <h3 class="heading heading--section heading--pink">{{name}}</h3>
+          <p v-if="isHover" class="paragraph paragraph--white">{{description}}</p>
+          <v-btn>more</v-btn>
+      </div> 
     </article>
 </template>
 <script>
@@ -23,17 +26,10 @@ export default {
     name: String,
     imgPath: String,
     description: String,
-   },
-   methods: {
-     alerto(){
-       this.isHover = !this.isHover
-      
-     }
    }
-
-
 }
 </script>
+
 <style lang="scss">
 .servicePanel{
   height:100%;
@@ -41,8 +37,15 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
+  &__overlay{
+    width: auto;
+    height: 100%;
+    transition: all 3s ease-in;
+  }
 }
+
+//transition
+
 
 /*
 .servicePanel__overlay{
