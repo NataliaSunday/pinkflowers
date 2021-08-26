@@ -23,9 +23,16 @@ export default {
     width: 100%;
     height: 100%;
     &__photo{
-        width: inherit;
-        height: inherit;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      border: .75rem solid white;
+       box-shadow: rgb(211, 208, 208) 3px 2px 10px;
+      cursor: pointer;
+      object-fit: cover; 
     }
+   
 }
 
 </style>

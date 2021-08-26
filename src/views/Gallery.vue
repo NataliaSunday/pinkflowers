@@ -48,7 +48,7 @@ export default {
 @import '../style/_variables.scss';
 .gallery{
     width: 100vw;
-    height: 100vh;
+    height: min-content;
     position: relative;
 
     &::after{
