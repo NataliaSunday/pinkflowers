@@ -4,7 +4,7 @@
       :style="{ 'background-image': 'url(' + require('../assets/services/' + imgPath) + ')' }"
  >
        <div class="servicePanel__overlay pb-8 " >
-          <h3 class="heading heading--section heading--pink">{{name}}</h3>
+          <h3 class="heading heading--section heading--pink servicePanel__overlay__heading">{{name}}</h3>
           <p class="paragraph paragraph--white servicePanel__overlay__paragraph">{{description}}</p>
     
       </div> 
@@ -36,42 +36,53 @@ export default {
   background-repeat: no-repeat;
   position: relative;
   &__overlay{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
     width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    position: relative;
+   
+   
+  &__heading{
+  
+
     position: absolute;
     left: 50%;
     bottom: 0%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%,-50%);
+    transition: all 1s  ease-in-out;
 
-    transition: transform 1s linear;
-   
-   &__paragraph{
-     background-color: aqua;
-     overflow-y: hidden;
-     height: 0;
-     transition: display 1s linear;
-   }
-   
+    
+    
     
   }
-}
-.servicePanel:hover .servicePanel__overlay{
-  background-color: rgba(0,0,0, 0.5);
+   &__paragraph{
+
     position: absolute;
     left: 50%;
-    bottom: 0;
-    transform: translate(-50%, -50%);
+    bottom: -50%;
+    z-index: -100;
+    transform: translate(-50%,-50%);
+    transition: all 1s  ease-in-out .5s;
+    opacity: 0;
+   }
+  }
+}
 
-
+.servicePanel:hover .servicePanel__overlay{
+background-color: rgba(0,0,0,.5);
+}
+.servicePanel:hover .servicePanel__overlay__heading{
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,-50%)
 }
 .servicePanel:hover .servicePanel__overlay__paragraph{
- 
-  overflow-y:visible;
- 
+   left: 50%;
+    bottom: 0%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    opacity: 1;
+
 }
 
 
