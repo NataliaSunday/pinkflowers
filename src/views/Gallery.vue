@@ -1,5 +1,5 @@
 <template>
-   <section class="gallery bg-white">
+   <section class="gallery bg-white pb-16">
         <Heading :sectionTitle=title :headingColor=headingColor></Heading>
           <v-container class="gallery__photoBox">
             <v-row>
