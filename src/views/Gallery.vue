@@ -1,26 +1,27 @@
 <template>
    <section class="gallery bg-white pb-16">
         <Heading :sectionTitle=title :headingColor=headingColor></Heading>
-          <v-container class="gallery__photoBox">
-            <v-row>
+          <v-container class="gallery__photoBox ">
+            <v-row class="d-flex justify-center align-stretch">
               <v-col
-              v-for="n in 6"
+              v-for="n in 5"
               :key="n"
-              cols="12"
+              cols="5"
               sm="2"
            >
-           <galleryPhoto :photoNumber="n"></galleryPhoto>
-          </v-col>
+              <galleryPhoto :photoNumber="n"></galleryPhoto>
+              </v-col>
+
             </v-row>
-             <v-row>
+            <v-row class="d-flex justify-center align-stretch">
               <v-col
-              v-for="n in 6"
+              v-for="n in 5"
               :key="n"
-              cols="12"
+              cols="5"
               sm="2"
-           >
-          <galleryPhoto :photoNumber="n"></galleryPhoto>
-          </v-col>
+              >
+              <galleryPhoto :photoNumber="n+5"></galleryPhoto>
+              </v-col>
             </v-row>
           </v-container>
 
@@ -62,10 +63,11 @@ export default {
         background-color: $color-light-green;
     }
     &__photoBox{
-      width: 90%;
+      width: 100%;
       height: 100%;
       position: relative;
       z-index: 2;
+
     }
 }
 
