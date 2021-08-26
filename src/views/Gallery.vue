@@ -22,7 +22,6 @@
           <galleryPhoto :photoNumber="n"></galleryPhoto>
           </v-col>
             </v-row>
-            <v-btn class="btn">more</v-btn>
           </v-container>
 
    </section>
