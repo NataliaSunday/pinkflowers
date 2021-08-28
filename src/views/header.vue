@@ -40,7 +40,7 @@ export default {
    &__list{
        list-style: none;
        position:fixed;
-       z-index: 100;
+       z-index: 3;
         width: 100%;
         background-color:none;
         transition:all .3s ease;

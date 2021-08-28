@@ -14,7 +14,8 @@
 export default {
   props: {
     photoNumber: Number,
-    isMagnified: false
+    isMagnified: false,
+    isMagnifiedIndex: 1000
   },
   computed: {
     imgUrl(){
@@ -40,16 +41,16 @@ export default {
       height: 100%;
       border-radius: 1rem;
       border: .75rem solid white;
-       box-shadow: rgb(211, 208, 208) 3px 2px 10px;
+      box-shadow: rgb(211, 208, 208) 3px 2px 10px;
       cursor: pointer;
       object-fit: cover; 
     }
 }
 .photoModal{
   position: fixed;
-  top: 0%;
-  left: 0%;
-  z-index: 1000;
+  top: 0;
+  left: 0;
+  z-index: 9999;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0, 0.75);
