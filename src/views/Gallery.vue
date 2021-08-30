@@ -92,7 +92,9 @@ export default {
   z-index: 5;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0, 0.75);
+  background-color: rgba(0,0,0, 0.85);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
   &__photo{
     margin: 0 auto;
     display: block;
@@ -101,7 +103,7 @@ export default {
   }
 }
 .scale-enter-active, .scale-leave-active {
-  transition: opacity .5s ease-in-out;
+  transition: opacity .25s ease-in;
 }
 .scale-enter, .scale-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
