@@ -61,6 +61,7 @@ export default {
 
 .servicePanel:hover .servicePanel__overlay{
 background-color: rgba(0,0,0,.5);
+ backdrop-filter: blur(2px);
 }
 
 .servicePanel:hover .servicePanel__overlay__heading{
