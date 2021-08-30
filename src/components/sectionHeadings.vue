@@ -23,7 +23,7 @@ export default {
         width: inherit;
         height: min-height;
         position: relative;
-        z-index: 1;
+        z-index: 2;
         &__decor{
             width: 20%;
             height: .15rem;
