@@ -105,7 +105,7 @@ export default {
 .scale-enter-active, .scale-leave-active {
   transition: opacity .25s ease-in;
 }
-.scale-enter, .scale-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.scale-enter, .scale-leave-to{
   opacity: 0;
 }
 
